@@ -1,0 +1,15 @@
+# Host-side (Jetson) dependencies.
+#
+# NOTHING is required for the test suite or the demo. `make test` and
+# `make demo` need only a C++17 compiler and Python 3.9+, deliberately: the
+# simulator is compiled from firmware/src rather than pip-installed, so it
+# cannot drift from the firmware.
+#
+# python-can is needed ONLY to talk to a real (or virtual) CAN interface:
+#     python3 host/jetson_test.py --channel can0
+python-can>=4.0
+
+# The firmware has no pip dependencies. It needs two Arduino libraries,
+# installed through the Arduino IDE Library Manager:
+#     FlexCAN_T4   https://github.com/tonton81/FlexCAN_T4
+#     WDT_T4       https://github.com/tonton81/WDT_T4
