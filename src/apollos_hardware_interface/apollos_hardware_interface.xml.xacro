@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<library xmlns:xacro="https://www.ros.org/wiki/xacro" path="apollos_hardware_interface">
+  <xacro:macro name="class" params="name type description">
+    <class name="apollo_hardware_interface/${name}"
+           type="apollo_hardware_interface::${name}"
+           base_class_type="hardware_interface::${type}"
+           description="${description}">
+    </class>
+  </xacro:macro>
+</library>
